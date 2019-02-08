@@ -70,7 +70,7 @@ away.argentina.matrix <- extract.score.cells.from.webpage(away.argentina.2016.to
 write.csv(away.argentina.matrix, "./RCHomeAdvantages/away.argentina.matrix.csv")
 
 home.newzealand.matrix <- extract.score.cells.from.webpage(home.newzealand.2016.to.2018.page)
-write.csv(away.newzealand.matrix, "./RCHomeAdvantages/away.newzealand.matrix.csv")
+write.csv(home.newzealand.matrix, "./RCHomeAdvantages/home.newzealand.matrix.csv")
 
 away.newzealand.matrix <- extract.score.cells.from.webpage(away.newzealand.2016.to.2018.page)
 write.csv(away.newzealand.matrix, "./RCHomeAdvantages/away.newzealand.matrix.csv")
