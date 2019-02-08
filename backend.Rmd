@@ -93,9 +93,9 @@ write.csv(home.australia.matrix, "./RCHomeAdvantages/home.australia.matrix.csv")
 away.australia.matrix <- extract.score.cells.from.webpage.special(away.australia.2016.to.2018.page)
 write.csv(away.australia.matrix, "./RCHomeAdvantages/away.australia.matrix.csv")
 
-home.argentina.matrix <- extract.score.cells.from.webpage.special(home.argentina.2016.to.2018.page)
-write.csv(home.argentina.matrix, "./RCHomeAdvantages/home.argentina.matrix.csv")
+home.southafrica.matrix <- extract.score.cells.from.webpage.special(home.southafrica.2016.to.2018.page)
+write.csv(home.southafrica.matrix, "./RCHomeAdvantages/home.southafrica.matrix.csv")
 
-away.argentina.matrix <- extract.score.cells.from.webpage.special(away.argentina.2016.to.2018.page)
-write.csv(away.argentina.matrix, "./RCHomeAdvantages/away.argentina.matrix.csv")
+away.southafrica.matrix <- extract.score.cells.from.webpage.special(away.southafrica.2016.to.2018.page)
+write.csv(away.southafrica.matrix, "./RCHomeAdvantages/away.southafrica.matrix.csv")
 ```
