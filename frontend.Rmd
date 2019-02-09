@@ -21,9 +21,9 @@ full.time.margin <- function(nation){
   filenames <- list.files("./RCHomeAdvantages")
   indexes <- grep(nation, filenames)
   away.df <- read.csv(paste0("./RCHomeAdvantages/", filenames[indexes[1]]))[,-c(1)] #away csv is read
-  away.margin <- sum(away.df[,1])/10 - sum(away.df[,2])/10
+  away.margin <- sum(away.df[,1])/length(away.df[,1]) - sum(away.df[,2])/length(away.df[,2])
   home.df <- read.csv(paste0("./RCHomeAdvantages/", filenames[indexes[2]]))[,-c(1)] #home csv is read
-  home.margin <- sum(home.df[,1])/10 - sum(home.df[,2])/10
+  home.margin <- sum(home.df[,1])/length(home.df[,1]) - sum(home.df[,2])/length(home.df[,2])
   return(home.margin - away.margin)
 }
 
@@ -41,9 +41,9 @@ half.time.margin <- function(nation){
   filenames <- list.files("./RCHomeAdvantages")
   indexes <- grep(nation, filenames)
   away.df <- read.csv(paste0("./RCHomeAdvantages/", filenames[indexes[1]]))[,-c(1)] #away csv is read
-  away.margin <- sum(away.df[,3])/10 - sum(away.df[,4])/10
+  away.margin <- sum(away.df[,3])/length(away.df[,3]) - sum(away.df[,4])/length(away.df[,4])
   home.df <- read.csv(paste0("./RCHomeAdvantages/", filenames[indexes[2]]))[,-c(1)] #home csv is read
-  home.margin <- sum(home.df[,3])/10 - sum(home.df[,4])/10
+  home.margin <- sum(home.df[,3])/length(home.df[,3]) - sum(home.df[,4])/length(home.df[,4])
   return(home.margin - away.margin)
 }
 
@@ -220,6 +220,6 @@ p <- add_trace(p, x=trace4$x, y=trace4$y, hoverinfo=trace4$hoverinfo, marker=tra
 p <- layout(p, autosize=layout$autosize, barmode=layout$barmode, height=layout$height, hovermode=layout$hovermode, margin=layout$margin, showlegend=layout$showlegend, width=layout$width, xaxis=layout$xaxis, yaxis=layout$yaxis)
 
 Sys.setenv("plotly_username"="kaitogoto7")
-#Sys.setenv("plotly_api_key"="insert_api_key_here")
+#Sys.setenv("plotly_api_key"="insert_api_key")
 api_create(p, filename = "Rugby Championship Home Advantages")
 ```
